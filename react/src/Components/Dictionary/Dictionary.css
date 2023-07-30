@@ -1,0 +1,36 @@
+.dictionary {
+  font-family: 'Roboto';
+  width: 1000px;
+  margin: 50px auto;
+}
+
+.dictionary__title {
+  color:#364963;
+  font-size: 48px;
+}
+
+.dictionary__word {
+  padding-top: 30px;
+}
+
+span {
+  padding-top: 4px;
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 20px;
+  background-color: #DFE4EC;
+}
+
+.dictionary__back-button-and-title {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.dictionary__back-button {
+  height: 43px;
+}

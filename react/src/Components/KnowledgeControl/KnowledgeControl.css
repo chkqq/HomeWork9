@@ -1,0 +1,20 @@
+.control {
+  font-family: 'Roboto';
+  width: 1000px;
+  margin: 50px auto;
+}
+
+.control__title {
+  color:#364963;
+  font-size: 48px;
+}
+
+.control__back-button-and-title {
+display: flex;
+gap: 10px;
+margin-bottom: 15px;
+}
+
+.control__back-button {
+height: 43px;
+}

@@ -1,0 +1,15 @@
+span {
+  padding-top: 4px;
+}
+
+.word-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 20px;
+  background-color: #FFFFFF;
+}
+.word-en {
+  width: 167px;
+  text-align: left;
+}

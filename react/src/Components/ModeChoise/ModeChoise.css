@@ -1,0 +1,16 @@
+.mode-choise {
+  font-family: 'Roboto';
+  width: 1000px;
+  margin: 50px auto;
+}
+
+.mode-choise__title {
+  color:#364963;
+  font-size: 48px;
+}
+
+.mode-choise__buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
