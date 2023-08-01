@@ -80,13 +80,14 @@ const useWordStore = create<WordState>((set) => {
 
     handleEdit: (updatedWord) => {
       set((state) => {
-        const updatedWords = state.words.map((word) =>
-          word.id === updatedWord.id ? updatedWord : word
-        );
-
-        localStorage.setItem('words', JSON.stringify(updatedWords));
-
-        return { ...state, words: updatedWords };
+        const wordIndex = state.words.findIndex((word) => word.id === updatedWord.id);
+        if (wordIndex !== -1) {
+          const updatedWords = [...state.words];
+          updatedWords[wordIndex] = updatedWord;
+          localStorage.setItem('words', JSON.stringify(updatedWords));
+          return { ...state, words: updatedWords };
+        }
+        return state;       
       });
     },
     

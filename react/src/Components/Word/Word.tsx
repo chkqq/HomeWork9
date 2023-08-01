@@ -8,12 +8,13 @@ import Popover from '@mui/material/Popover';
 import { Link } from 'react-router-dom';
 
 type WordProps = {
+  id: number;
   ruWord: string;
   enWord: string;
-  onDelete: () => void;
+  onDelete: (id: number) => void;
 };
 
-function Word({ ruWord, enWord, onDelete }: WordProps) {
+function Word({ id, ruWord, enWord, onDelete }: WordProps) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -25,7 +26,7 @@ function Word({ ruWord, enWord, onDelete }: WordProps) {
   };
 
   const handleDelete = () => {
-    onDelete();
+    onDelete(id);
     handleMenuClose();
     window.location.reload();
   };

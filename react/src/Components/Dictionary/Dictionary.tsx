@@ -24,8 +24,7 @@ function Dictionary() {
 
   useEffect(() => {
     if (updatedWord) {
-      // Обновляем компонент при изменении слова
-      setUpdatedWord(null); // Сбрасываем updatedWord обратно в null
+      setUpdatedWord(null);
     }
   }, [updatedWord]);
 
@@ -53,6 +52,7 @@ function Dictionary() {
           </div>
           {words.map((word) => (
             <Word
+              id={word.id}
               key={`${word.ruWord}-${word.enWord}`}
               ruWord={word.ruWord}
               enWord={word.enWord}

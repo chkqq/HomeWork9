@@ -37,9 +37,13 @@ function EditWord() {
   };
 
   const handleEditWord = () => {
+    if (!ruWord || !enWord) {
+      alert('Пожалуйста, заполните оба поля перед сохранением.');
+      return;
+    }
     const selectedWord = words.find((word) => word.ruWord === id);
     if (selectedWord) {
-      const updatedWord = { ...selectedWord, ruWord, enWord };
+      const updatedWord = { ...selectedWord, ruWord, enWord};
       handleEdit(updatedWord);
     }
     navigate('/dictionary');
