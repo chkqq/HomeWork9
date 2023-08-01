@@ -2,10 +2,10 @@
   font-family: 'Roboto';
   width: 1000px;
   margin: 50px auto;
+  color: #364963;
 }
 
 .dictionary__title {
-  color:#364963;
   font-size: 48px;
 }
 
@@ -23,6 +23,7 @@ span {
   font-size: 15px;
   padding: 20px;
   background-color: #DFE4EC;
+  border-radius: 5px;
 }
 
 .dictionary__back-button-and-title {

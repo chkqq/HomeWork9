@@ -1,15 +1,68 @@
+import React from 'react';
 import './Word.css';
-import { Menu } from '@mui/icons-material';
+import { Menu, Delete, ModeEdit } from '@mui/icons-material';
 import MenuItem from '@mui/material/MenuItem';
+import { Button } from '@mui/material';
 import MenuList from '@mui/material/MenuList';
+import Popover from '@mui/material/Popover';
+import { Link } from 'react-router-dom';
 
-function Word() {
-  return(
+type WordProps = {
+  ruWord: string;
+  enWord: string;
+  onDelete: () => void;
+};
+
+function Word({ ruWord, enWord, onDelete }: WordProps) {
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+  const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleDelete = () => {
+    onDelete();
+    handleMenuClose();
+    window.location.reload();
+  };
+
+  return (
     <div className='word-box'>
-      <span className='word-ru'>Автомобиль</span>
-      <span className='word-en'>Car</span>
-      <Menu></Menu>
+      <span className='word-ru'>{ruWord}</span>
+      <span className='word-en'>{enWord}</span>
+      <Button onClick={handleMenuOpen}><Menu /></Button>
+      <Popover
+        open={Boolean(anchorEl)}
+        anchorEl={anchorEl}
+        onClose={handleMenuClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        <MenuList className='menu'>
+          <Link to={`/editword/${ruWord}`} className='edit-link'>
+            <MenuItem>
+              <ModeEdit />
+              Редактировать
+            </MenuItem>
+          </Link>
+          <MenuItem onClick={handleDelete}>
+            <Delete />
+            Удалить
+          </MenuItem>
+        </MenuList>
+      </Popover>
     </div>
   );
 }
+
 export default Word;

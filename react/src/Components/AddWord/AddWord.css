@@ -1,0 +1,89 @@
+.add-word {
+  font-family: 'Roboto';
+  width: 1000px;
+  margin: 50px auto;
+  color:#364963;
+}
+
+.add-word__title {
+  
+  font-size: 48px;
+}
+
+.add-word__word {
+  padding-top: 30px;
+}
+
+span {
+  padding-top: 4px;
+}
+
+
+.add-word__back-button-and-title {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add-word__back-button {
+  height: 43px;
+}
+
+.add-word__box {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 1px 0px 25px 0px;
+  font-size: 17px;
+  border: #DFE4EC 2px solid;
+}
+
+.add-word__vocabulary {
+  border-bottom: #DFE4EC 2px solid;
+  margin-bottom: 30px;
+}
+
+.add-word__vocabulary-text {
+  font-size: 30px;
+  margin-left: 25px;
+}
+
+.add-word__buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px
+}
+
+.box__ru {
+  display: flex;
+  gap: 85px;
+  margin-left: 25px;
+}
+
+.box__ru-title {
+  padding-top: 18px;
+}
+
+.box__ru-input {
+  width: 300px;
+  background-color: #DFE4EC;
+  border-radius: 5px;
+
+}
+
+.box__en {
+  margin-top: 20px;
+  display: flex;
+  gap: 50px;
+  margin-left: 25px;
+}
+
+.box__en-title {
+  padding-top: 18px;
+}
+
+.box__en-input {
+  width: 300px;
+  background-color: #DFE4EC;
+  border-radius: 5px;
+}
+

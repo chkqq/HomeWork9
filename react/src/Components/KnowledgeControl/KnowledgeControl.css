@@ -9,6 +9,11 @@
   font-size: 48px;
 }
 
+.control__number-of-word {
+  color: #364963;
+  font-size: 20px;
+}
+
 .control__back-button-and-title {
 display: flex;
 gap: 10px;
@@ -16,5 +21,49 @@ margin-bottom: 15px;
 }
 
 .control__back-button {
-height: 43px;
+  height: 43px;
 }
+
+.control__translation-box {
+  background-color: #FFFFFF;
+  color:#364963;
+  padding: 25px;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-bottom: 17px;
+}
+
+.translation-box__rus {
+  display: flex;
+  gap: 85px;
+}
+
+.translation-box__rus-title {
+  padding-top: 18px;
+}
+
+
+.translation-box__rus-word {
+  width: 270px;
+  background-color: #EFF2F5;
+  border-radius: 5px;
+  padding: 15px;
+
+}
+
+.translation-box__en {
+  margin-top: 20px;
+  display: flex;
+  gap: 50px;
+}
+
+.translation-box__en-title {
+  padding-top: 18px;
+}
+
+.translation-box__en-select {
+  width: 300px;
+  background-color: #EFF2F5;
+  border-radius: 5px;
+}
+

@@ -9,7 +9,21 @@ span {
   padding: 20px;
   background-color: #FFFFFF;
 }
+
 .word-en {
-  width: 167px;
   text-align: left;
+  width:  205px;
+}
+
+.word-ru {
+  width: 165px;
+}
+
+.edit-link {
+  text-decoration: none;
+  color: #364963;
+}
+
+.menu {
+  color: #364963;
 }
